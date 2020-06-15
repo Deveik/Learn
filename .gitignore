@@ -9,6 +9,7 @@
 *.iml
 out
 gen
+target
 
 # BlueJ files
 *.ctxt
