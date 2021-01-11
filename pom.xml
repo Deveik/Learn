@@ -4,28 +4,37 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.xxx</groupId>
-    <artifactId>learn-basic</artifactId>
+    <artifactId>learn-overall</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>learn-basic</name>
+    <name>learn-overall</name>
     <description>manager basic maven setting</description>
 
     <modules>
-        <module>Basic/learn-java</module>
-<!--        <module>learn-jxls</module>-->
-<!--        <module>learn-logback</module>-->
-<!--        <module>learn-mybatis</module>-->
+        <module>java-lang-reference-samples</module>
+        <module>spring-boot-samples</module>
+        <module>single-framework-samples</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <spring-boot.version>2.3.6.RELEASE</spring-boot.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- Spring Boot -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--  logback  -->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
@@ -53,8 +62,28 @@
 
     <repositories>
         <repository>
-            <id>aliyun</id>
-            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+            <id>central</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <layout>default</layout>
+            <!-- 是否开启发布版构件下载 -->
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <!-- 是否开启快照版构件下载 -->
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>jcenter-snapshots</id>
+            <name>jcenter</name>
+            <url>https://jcenter.bintray.com/</url>
+        </repository>
+        <repository>
+            <id>spring</id>
+            <name>ali mavan spring</name>
+            <url>https://maven.aliyun.com/repository/spring</url>
         </repository>
     </repositories>
 

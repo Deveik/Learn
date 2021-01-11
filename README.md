@@ -1,6 +1,6 @@
 [TOC]
 
-# Simple
+# Learn
 
 ## 简述
 该项目用于简单了解框架的使用方式和其下部分功能源码的理解；
@@ -10,6 +10,9 @@
 1. 简述该框架的主要负责区域以及主要功能，列举相似的框架和对应的优点
 2. 根据官方文档提供的内容，编写测试用例去进行测试（尽可能保持项目的简介）
 3. 根据需要去析构主要功能是如何实现的
+
+## 结构参考
++ [dubbo-spring-boot-project](https://github.com/apache/dubbo-spring-boot-project)
 
 ## TODOS
 + [ ] Dozer
