@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: mybatisplus-sample
+
+server:
+  address: localhost
+  port: 7777
