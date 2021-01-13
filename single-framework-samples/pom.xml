@@ -17,6 +17,7 @@
         <module>orm-mybatis-sample</module>
         <module>db-elasticsearch-sample</module>
         <module>distributed-kafka-sample</module>
+        <module>orm-ebean-sample</module>
     </modules>
 
     <dependencies>

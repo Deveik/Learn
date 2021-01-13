@@ -15,9 +15,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @MapperScans(@MapperScan("org.xxx"))
 public class MybatisPlusConfig {
-    /**
-     * 乐观锁插件
-     */
+
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();

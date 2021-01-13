@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>single-framework-samples</artifactId>
+        <groupId>org.xxx</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>orm-ebean-sample</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.ebean</groupId>
+            <artifactId>ebean</artifactId>
+            <version>12.6.2</version>
+        </dependency>
+        <!-- Query bean support -->
+        <dependency>
+            <groupId>io.ebean</groupId>
+            <artifactId>ebean-querybean</artifactId>
+            <version>12.6.2</version>
+        </dependency>
+        <!-- APT Query bean generation for Java -->
+        <dependency>
+            <groupId>io.ebean</groupId>
+            <artifactId>querybean-generator</artifactId>
+            <version>12.6.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Test dependencies -->
+        <!-- includes docker test database container support  -->
+        <dependency>
+            <groupId>io.ebean</groupId>
+            <artifactId>ebean-test</artifactId>
+            <version>12.6.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
