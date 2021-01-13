@@ -12,4 +12,28 @@
 
     <artifactId>orm-mybatisplus-sample</artifactId>
 
+    <properties>
+        <mybatis-plus.version>3.4.1</mybatis-plus.version>
+    </properties>
+
+    <dependencies>
+        <!--  mybatis-plus-boot-starter     -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
+        <!--   h2     -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/p6spy/p6spy -->
+        <dependency>
+            <groupId>p6spy</groupId>
+            <artifactId>p6spy</artifactId>
+            <version>3.9.1</version>
+        </dependency>
+    </dependencies>
 </project>

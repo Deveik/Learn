@@ -1,7 +1,22 @@
 spring:
   application:
     name: mybatisplus-sample
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    schema: classpath:db/schema-h2.sql
+    data: classpath:db/data-h2.sql
+    url: jdbc:p6spy:h2:mem:test
+    username: root
+    password: test
 
 server:
   address: localhost
   port: 7777
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false # 驼峰式命名
+  global-config:
+    db-config:
+      logic-delete-value: 4 # 逻辑已删除值(默认为 4)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)

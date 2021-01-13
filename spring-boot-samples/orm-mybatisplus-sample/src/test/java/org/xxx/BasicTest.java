@@ -9,7 +9,8 @@ public class BasicTest {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Test
-    public void simpleTest() {
-        logger.info("ss");
+    public void hello() {
+        logger.info("Hello");
     }
+
 }
