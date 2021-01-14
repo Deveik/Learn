@@ -48,7 +48,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.13</version>
+            <version>4.13.1</version>
             <scope>test</scope>
         </dependency>
         <!--  强化注解  -->
@@ -83,9 +83,18 @@
         <repository>
             <id>spring</id>
             <name>ali mavan spring</name>
+            <layout>default</layout>
             <url>https://maven.aliyun.com/repository/spring</url>
         </repository>
     </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>alicloudplugin</id>
+            <name>aliyun maven plugin</name>
+            <url>https://maven.aliyun.com/repository/spring-plugin</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <build>
         <plugins>
