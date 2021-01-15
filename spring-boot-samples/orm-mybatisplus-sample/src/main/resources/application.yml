@@ -8,6 +8,8 @@ spring:
     url: jdbc:p6spy:h2:mem:test
     username: root
     password: test
+  transaction:
+    default-timeout: 10
 
 server:
   address: localhost

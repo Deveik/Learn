@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: better-action-sample
+  transaction:
+    default-timeout: 10
+
+server:
+  address: localhost
+  port: 7777
+

@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.*;
 import org.xxx.modules.base.entity.User;
 import org.xxx.modules.base.service.UserService;
 
-import java.util.Random;
-
 /**
  * @author Deveik
  */
