@@ -12,6 +12,7 @@
 
     <modules>
         <module>basic-sample</module>
+        <module>tool-sample</module>
     </modules>
 
     <packaging>pom</packaging>
