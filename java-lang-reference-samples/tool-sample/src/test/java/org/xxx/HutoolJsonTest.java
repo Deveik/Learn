@@ -66,4 +66,62 @@ public class HutoolJsonTest {
         TestObj testObj = obj.toBean(TestObj.class);
         logger.info(" {}", testObj);
     }
+
+    @Test
+    public void innerJsonArray() {
+        String parsedStr = "{\n" +
+                "    \"code\": 0,\n" +
+                "    \"data\": {\n" +
+                "        \"totalCount\": 39,\n" +
+                "        \"itemCount\": 39,\n" +
+                "        \"items\": [\n" +
+                "            {\n" +
+                "                \"accId\": 800049746,\n" +
+                "                \"cashBal\": 0,\n" +
+                "                \"cashLockBal\": 0,\n" +
+                "                \"cashCost\": 0,\n" +
+                "                \"rebateBal\": 0,\n" +
+                "                \"rebateCost\": 0,\n" +
+                "                \"virBal\": 0,\n" +
+                "                \"virCost\": 0,\n" +
+                "                \"accDayBudget\": 0,\n" +
+                "                \"totalBalance\": 0,\n" +
+                "                \"lastDayCost\": 0,\n" +
+                "                \"ownerId\": 1100049873,\n" +
+                "                \"ownerName\": \"LX1612413477\",\n" +
+                "                \"ownerType\": 1,\n" +
+                "                \"auditStatus\": 1,\n" +
+                "                \"insertTime\": 1612413479,\n" +
+                "                \"updateTime\": 1612413479,\n" +
+                "                \"openId\": \"1612413477\"\n" +
+                "            },\n" +
+                "            {\n" +
+                "                \"accId\": 800049660,\n" +
+                "                \"cashBal\": 0,\n" +
+                "                \"cashLockBal\": 0,\n" +
+                "                \"cashCost\": 0,\n" +
+                "                \"rebateBal\": 0,\n" +
+                "                \"rebateCost\": 0,\n" +
+                "                \"virBal\": 0,\n" +
+                "                \"virCost\": 0,\n" +
+                "                \"accDayBudget\": 0,\n" +
+                "                \"totalBalance\": 0,\n" +
+                "                \"lastDayCost\": 0,\n" +
+                "                \"ownerId\": 1100049787,\n" +
+                "                \"ownerName\": \"LX1612410393\",\n" +
+                "                \"ownerType\": 1,\n" +
+                "                \"auditStatus\": 1,\n" +
+                "                \"insertTime\": 1612410394,\n" +
+                "                \"updateTime\": 1612410394,\n" +
+                "                \"openId\": \"1612410393\"\n" +
+                "            }\n" +
+                "        ]\n" +
+                "    }\n" +
+                "}";
+        JSONObject object = JSONUtil.parseObj(parsedStr);
+        Object byPath = JSONUtil.getByPath(object, "data.items");
+        JSONArray data = object.getJSONObject("data").getJSONArray("items");
+        System.out.println(data);
+        System.out.println(byPath);
+    }
 }

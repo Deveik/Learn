@@ -12,5 +12,17 @@
 
     <artifactId>orm-mybatis-sample</artifactId>
 
+    <properties>
+        <mybatis-version>3.5.6</mybatis-version>
+    </properties>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis-version}</version>
+        </dependency>
+    </dependencies>
 
 </project>
