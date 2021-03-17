@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: join-search-sample
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: --------------
+    password: ---------
+    username: ---------
+
+  transaction:
+    default-timeout: 10
+
+server:
+  address: localhost
+  port: 7777
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false # 驼峰式命名
+    localCacheScope: SESSION
+  global-config:
+    db-config:
+      logic-delete-value: 4 # 逻辑已删除值(默认为 4)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)

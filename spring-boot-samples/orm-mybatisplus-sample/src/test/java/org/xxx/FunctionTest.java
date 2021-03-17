@@ -73,4 +73,11 @@ public class FunctionTest {
         logger.info(" {}", user);
     }
 
+    @Test
+    public void groupMultipleFields() {
+        List<User> users =
+                userDao.selectList(Wrappers.<User>lambdaQuery().groupBy(User::getName).groupBy(User::getEmail));
+        users.forEach(user -> logger.info(" {}", user));
+    }
+
 }
